@@ -1,0 +1,194 @@
+<!-- 
+
+- common practice to separate external CSS files and HTML documents, so developers use the <link> element
+- practice to separate JS code scripts in a different file then link it using script and src
+
+HTML
+    - represents the content and structure of a webpage
+    - case insensitive but common practice to type in lowercase
+     
+    Elements and Attributes 
+        <h1></h1> = main heading (only one)
+        <h2></h2> = subheadings (there can be multiple)
+        ...
+        <h6></h6> = smallest heading element
+        <p></p> = paragraph element
+
+        <img> = used to place images in the webpage
+            <img src="(source location)" alt="(short description of the image)" />
+
+        <link> = link external stylesheets and site icons 
+            <link rel="(set the relationship of the linked resource to the HTML document)" href="./(specify location of the URL or linked resource)" />
+                    - placed in the head element
+                        ./ = is used to tell the computer to look in the current directory or folder for a specific file
+                            e.g. ./yahallo.css
+                    <link rel="preconnect", "stylesheet", "icon" href="(URL)", "./styles.css", "favicon.ico" />
+            <a href="(URL)"> (text) </a> = used for hyperlinking URL's 
+            - target="_blank" = open a new window 
+
+        <meta>
+            <meta property="og: url, title, image, type" content="(link), (title), (image),(website, etc.)">
+            <meta name="description" content="(insert short description)" = for more website traffic
+            <meta charset="UTF-8" />
+        <ul></ul> = unordered list
+        <li></li> = ordered list
+        <figure></figure> = allow to associate an image with a caption (nest images within this element) 
+        <figcaption></figcaption> = add captions of an image inside of a figure element 
+        <em></em> = puts emphasis on text. can be placed inside of captions or other elements. italicize the text
+        <strong></strong> = bolds the text
+        <div></div> = can be anything. can also be styled in CSS
+        <script></script> = used to embed executable code. link JS code
+            - can use src attribute to link the JS file
+        
+        <audio></audio>
+            <src=""><controls><loop><muted>
+                When it comes to audio file types, there are differences in which browsers support which type. To accommodate this, 
+                you can use source elements inside the audio element and the browser will select the first source that it understands. 
+                    <audio controls>
+                        <source src="audio.wav" type="audio/wav" />
+                        <source src="audio.mp3" type="audio/mpeg" />
+                        etc.
+                    </audio controls>
+                        -goes through each to see which is compatible
+
+        <video></video>
+            <src="">
+            <controls> - adjust volume and time of v
+            <loop> - replays the audio/video
+            <muted> - starts the video muted
+            <poster> - displays an image while the video is downloading
+            <width> - adjust the size
+        
+            <source src="file" type="audio or video /mpeg or mp4"
+
+        <svg></svg> = container for the drawing
+            viewbox="0 0 24 24" first two numbers set the center of the image, followed by the width then height
+            <circle>
+            <path>
+        
+        <iframe></iframe>
+            - inline frame used to embed other HTML content directly within the HTML page
+            - use srcdoc if you want to embed another HTML
+            <iframe
+            src="video-url"
+            width="width-value"
+            height="height-value"
+            allowfullscreen
+            title=""
+            allow="accelerometer autoplay clipboard-write encrypted-media gyroscope picture-in-picture web-share"
+                - accelerometer detects device tilting and rotation, autplay auto starts the video, clipboard-write saves data to user clipboard
+            referrerpolicy="strict-origin-when-cross-origin"
+                - This shares the full address on the same site, only the site name on other sites, and nothing on insecure sites
+            >
+            </iframe>
+            
+        <nav> = used so you can easily navigate into different parts of your webpage
+        <article></article> = use when making an article about something
+
+        <fieldset>
+            <legend></legend>
+        </fieldset> 
+
+    Attributes
+         - value placed inside the opening tag of an HTML element. 
+         - provide additional information about the element or specify how the element should behave.
+
+            <a href="(URL)"> (text) </a> = used for hyperlinking URL's 
+                - target="_blank" = open a new window 
+            
+            <id="title"> = add a unique identifier to an element. use # to reference it in and style in CSS or JS
+            <class="box, super"> = can add a not unique identifier to an element. use . to reference it and style
+                - Use an id when you need a unique identifier for a specific element, 
+                  and use a class when you want to apply styles or behavior to multiple elements.
+
+            
+    HTML Entities
+        <p>This is an <img /> element</p>
+        <p>This is an &lt;img &gt; element</p>
+        - A set of characters used to represent a reserved character in HTML.
+
+    Boilerplate
+        - used to give a proper structure to your document. can also be customized to what you need
+            <!DOCTYPE html> = declares what version of HTML you're using
+            <html lang="en"> </html>= declare the language of your document
+            <head></head> = contains important info, like meta data and elements. usually where you place the <link> element
+            <body></body> = where you start writing code/the program
+        - UTF-8 Character Encoding
+            method computers use to store characters as data
+
+    SEO or Search Engine Optimization
+        - optimizes web pages so they become more visible and rank higher on search engines
+        use <name> and <content> attribute to give more traffic to your website
+            
+        Open Graph Protocol
+            - enables you to control how your website's content appears across various social media platforms
+
+    Common Ways to Optimize Media Assets
+        - better to use WEBP or AVIF file formats instead of JPEG or PNG(unless you want to support older versions)
+        - resolution of image displayed should be tailored to the original size of the image
+            640x480 (widthxheight)
+        - never compress JPG files because they lose quality
+
+    Different Types of Image Licenses
+        - images have copyright so
+            obtain written permission from the copyright holder, purchase a license from the copyright holder, 
+            or incorporate the image in a way that falls under fair use.
+        - images under Creative Commons 0 is public
+        - all rights reserved
+    
+    Image Types
+        - PNG and JPG are in raster formats. 
+            - pixel-based with the data tracking the color value in each pixel.
+            - becomes blurry if enlarged or scaled
+        - SVG's or scalar vector graphic
+            - tracks data based on paths and equations to plot points, lines, and curves
+            - can scale to any size without impacting the quality
+            - stores data in XML where you can directly use it as raw HTML in your code with the <svg> element
+            - can change the color of the image through programming
+            - great to use for icons or custom bullet points, logos
+
+    Replaced Elements
+        - an element whose content is determined by an external resource rather than by CSS itself
+        - can control the layout or position of the element but not the actual content of the image
+            - likewise on iframe. it can change the positioning of the embedded site but not the content itself
+
+    Different Target Attribute Types
+        <a href="(insert source)" target="_blank">
+            _blank = open in new window/tab
+            _self = open in the same window/tab
+            _parent = opens the link in the parent of the current context
+                if you have an iframe with _parent, it would open in the window/tab not the embed
+            _top = opens the link in the top-most browsing context
+                always open in the full browser tab/window,
+
+    Absolute and Relative Paths
+        - A path is a string that specifies the location of a file or directory in a file system
+        - Absolute paths include all the directories, domains, filename, etc
+        - Relative paths specifies the location of a file relative to the directory of the current file.
+        - Use absolute paths when linking to a resource hosted on an external website.
+        - Use absolute paths when you need the link to a page or resource to work consistently regardless of the document location within the site.
+        - Use relative paths when linking to resources within the same website.
+        - Use relative paths if you want to keep your code cleaner and easier to maintain during development.
+        - Use relative paths during local testing to ensure links work without an internet connection.
+
+    Difference Between Slashes, a Single Dot, and Double Dot in Path Syntax
+        - The slash is known as the "path separator". It is used to indicate a break in the text between folder or file names. (Absolute)
+        - A single dot points to the current directory, and two dots point to the parent directory. 
+        - You will typically see a single dot used to ensure that the path is recognized as a relative path.
+
+    Different Link States
+        :link - state represents a link which the user has not visited, clicked, or interacted with yet.
+        :visited - applies when a user has already visited the page being linked to. By default, this turns the link purple
+        :hover - applies when a user is hovering their cursor over a link. helpful for providing extra attention to a link, to ensure a user actually intends to click it.
+        :focus - applies when we focus on a link.
+        :active - links are being activated by the user.
+        link visited hover focus active -> order by which you should style your links
+        
+    
+    
+
+
+
+
+
+ -->

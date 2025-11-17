@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <section>
+        <h1 id="title">Survey Form for Sigma Gigas</h1>
+            <p id="description">This survey form is to collect your thoughts on Me</p>
+    </section>
+
+    <section>
+        <form id="survey-form">
+            <fieldset>
+                <legend>About You</legend>
+                    <label for="name" id="name-label"> Name </label>
+                        <input required type="text" id="name" placeholder="Enter your name"/>
+                    <label id="email-label">Email</label>
+                        <input required type="email" id="email" placeholder="Enter your email"/>
+                    <label id="number-label">Age</label>
+                        <input type="number" id="number" placeholder="ex. 19" min="15" max="30"/> <br />
+            </fieldset>
+            <fieldset>
+                <legend>Am I handsome?</legend>
+                    <select required id="dropdown">
+                        <option selected disabled value="select-one">Select one</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="maybe">Maybe</option>
+                        <option value="hell-no">Hell No</option>
+                    </select>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Do you regret being my friend?</legend>
+                    <input id="yes-option" type="radio" name="regret-friend" value="regret-friend">
+                    <label for="yes-option">Yes</label>
+                    <input id="no-option" type="radio" name="regret-friend" value="regret-friend">
+                    <label for="no-option">No</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Why did you choose to become my friend? (Check all that apply) </legend>
+                    <input type="checkbox" id="nice" name="nice" value="nice">
+                    <label for="nice">Nice</label>
+
+                    <input type="checkbox" id="smart" name="smart" value="smart">
+                    <label for="smart">Smart</label>
+
+                    <input type="checkbox" id="napilitan" name="napilitan" value="napilitan">
+                    <label for="napilitan">Napilitan</label>
+
+                    <input type="checkbox" id="vibes" name="vibes" value="vibes">
+                    <label for="vibes">Vibes</label>
+            </fieldset>
+
+            <br />
+                <label for="comments">Leave your comments and suggestions in this box!</label>
+                <textarea cols="40" rows="2" name="comments" id="comments"></textarea>
+                <button id="submit" type="submit">Submit</button>
+            
+        </form>
+    </section>
+</body>
+</html>
+

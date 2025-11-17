@@ -1,0 +1,110 @@
+<!--
+Semantic HTML
+
+    - Semantics are the meaning of words, or phrases, in a language. In HTML, which is a language, elements have their own semantic meaning too.
+    - The semantic meaning of an element refers to what special information that element conveys.
+    - improves user experience and more exposure in SEO. also improves readability and development experience.
+
+    Importance of Good Structural Hierarchy
+        - accessiiblity and good SEO
+        
+    Difference Between Presentational and Semantic HTML
+        - presentational is depracated and no longer in use. semantic is better and used overall for better readability etc.
+        Examples of semantic HTML elements include:
+            The header element for defining the header of the document, or section.
+            The navigation section element, nav, for sections with navigation links.
+            The section element for grouping related information.
+            The figure element for illustrations and diagrams.
+            
+        - semantic HTML describes the content, while presentational HTML focuses on the appearance.
+
+    Understanding Nuanced Semantic Elements
+
+        Emphasis Element vs Idiomatic Text Element <em> vs <i>
+            - use <i> when differentiating text from its surrounding content without conveying specific importance
+            - use <em> element to emphasize text
+        
+        Strong Element vs Bring Attention to Element <strong> vs <b>
+            - use strong element when you want to give emphasis or importance on a text, while use <b> element when you only want to draw their attention to that
+
+        Description Lists <dl>, Description Term <dt>, Description Details <dd>
+            - perfect for presenting terms and definitions in an organized and easy-to-read format, like in a glossary, or real dictionary
+            - Essentially, when you have two related pieces of information in a key-value pair format, where one acts as a label, the key, 
+            and the other acts as additional related information, the value, you can use a description list.
+
+    Text and time Semantic Elements
+        
+        Block and Inline Quotes
+            - block quotes <blockquote></blcokquote>
+                - <cite> attribute
+                    - very helpful for giving screen readers and search engines more information about the quote
+            - inline quotes <q></q>
+                - <cite> attribute
+            
+            - use block quotes for extended quotations from other sources and inline quotes for short quotations from other sources that should be part of existing paragraphs.
+
+        Displaying Abbreviations <abbr></abbr>
+            - The distinction is acronyms are pronounced as words and initialisms are pronounced as individual letters
+            - acronyms are the first letter of each individual word/text
+            - initialisms is the first letter of each word in a phrase
+            - use <title> attribute to show the full form of the abbreviation
+                <abbr title=""></abbr>
+
+        Displaying Addresses in HTML <address>
+            - used for displaying contact information in websites
+            - use <br /> to line break (put after text)
+                Super Duper<br />
+            <address>
+                <a href="tel:+(insert telephone number)", "mailto:(insert email)"
+            </address>
+        
+        Displaying Time in HTML <time></time>
+            - represent a specific moment in time.
+            - <datetime> attribute
+                - translate dates and times into a machine-readable format
+            - it is in the ISO 8601 Format
+                - Year Month Day T Date Time (YYYY-MM-DD-T-HH-MM-SS)
+                    - T is a separator for YMD and DT
+                        - 2025-10-10T16:00
+
+            <p><time datetime="20:00">20:00<time></p>
+        
+        Math and Chem
+            <sup> <sub>
+
+        Computer Code in HTML
+            <pre> - used to encode preformatted code
+            <code> - used to place small snippets of code in your website
+         
+        U, S, and Ruby Elements
+            <u> - underline
+            <s> - strikethrough
+            <ruby> - for east asian characters
+        
+    Forms and Tables
+        Forms, Inputs and Labels
+            - <form></form> is used to gather information and action is where the information will be sent upon submission.
+                use the <input type="" placeholder=""}> (void) element to collect the infomration
+                we use the <label for=""></label> to implicitly associate the elements
+        Types of Buttons
+            - <button type=""></button>
+                <form action="">
+                <label for="email">Email address:</label>
+                <input type="email" id="email" name="email" />
+                <button type="reset">Reset form</button>
+                <button type="submit">Submit form</button>
+                </form>
+
+        Different Form States
+            <input readonly, focused, disabled type="email" value="example@email.com"
+                readonly can be focused but not edited
+                focused - highlights the input box and it can be edited
+                disabled - can't be highlighted/focused nor edited
+
+        DOM Inspector and DevTools  
+
+
+
+
+
+-->
